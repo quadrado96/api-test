@@ -1,5 +1,6 @@
 package com.quadrado.testeapi
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
@@ -19,8 +20,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val telaCadastro = Intent(this, Cadastro::class.java)
+
         val listaUsuarios = findViewById<ListView>(R.id.lista)
-        val fab_usuario = findViewById<FloatingActionButton>(R.id.fab_novoUsuario)
+        val fab_usuario = findViewById<FloatingActionButton>(R.id.fab_novoUsuario).setOnClickListener() {
+                startActivity(telaCadastro)
+        }
 
     }
 }
