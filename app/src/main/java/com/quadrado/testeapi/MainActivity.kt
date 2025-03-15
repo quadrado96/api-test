@@ -2,6 +2,7 @@ package com.quadrado.testeapi
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,5 +28,18 @@ class MainActivity : AppCompatActivity() {
                 startActivity(telaCadastro)
         }
 
+        atualizarLista()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        atualizarLista()
+    }
+
+    fun atualizarLista() {
+        val listaUsuarios = findViewById<ListView>(R.id.lista)
+        val listaBD = Database.getInstance(this)!!.UsuarioDAO().listarUsuarios()
+        val listaAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listaBD)
+        listaUsuarios.adapter = listaAdapter
     }
 }

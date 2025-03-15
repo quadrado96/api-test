@@ -135,9 +135,10 @@
         android:id="@+id/imgb_buscar"
         android:layout_width="60dp"
         android:layout_height="45dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/et_cep"
-        app:srcCompat="?android:attr/actionModeWebSearchDrawable"
-        tools:layout_editor_absoluteY="251dp" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
 </androidx.constraintlayout.widget.ConstraintLayout>

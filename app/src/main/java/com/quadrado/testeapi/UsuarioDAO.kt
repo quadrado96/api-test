@@ -11,6 +11,6 @@ interface UsuarioDAO {
     fun salvar(c: Usuario)
 
     @Query("SELECT * FROM Usuario ORDER BY id")
-    fun listarContatos(): List<Usuario>
+    fun listarUsuarios(): List<Usuario>
 
 }

@@ -18,8 +18,8 @@ data class Usuario(
 ) {
 
     override fun toString(): String {
-        return "$id - $nome    $telefone" +
-                "$email   $cep" +
+        return "$id - $nome    $telefone \n" +
+                "$email   $cep \n" +
                 "$rua, $bairro / $cidade - $estado"
     }
 
