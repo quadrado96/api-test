@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cadastro">
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="text"
+        android:textColorHint="@color/material_dynamic_neutral_variant60"
+        app:layout_constraintBottom_toTopOf="@+id/et_telefone"
+        app:layout_constraintStart_toStartOf="@+id/et_telefone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:id="@+id/et_telefone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Telefone"
+        android:inputType="phone"
+        android:textColorHint="@color/material_dynamic_neutral_variant60"
+        app:layout_constraintBottom_toTopOf="@+id/et_email"
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/material_dynamic_neutral_variant60"
+        app:layout_constraintBottom_toTopOf="@+id/et_cep"
+        app:layout_constraintStart_toStartOf="@+id/et_cep"
+        app:layout_constraintTop_toBottomOf="@+id/et_telefone"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_cep"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Cep"
+        android:inputType="number"
+        android:textColorHint="@color/material_dynamic_neutral_variant60"
+        app:layout_constraintBottom_toTopOf="@+id/et_rua"
+        app:layout_constraintStart_toStartOf="@+id/et_rua"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_rua"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Rua"
+        android:inputType="text"
+        android:textColorHint="@color/material_dynamic_neutral_variant60"
+        app:layout_constraintBottom_toTopOf="@+id/et_bairro"
+        app:layout_constraintStart_toStartOf="@+id/et_bairro"
+        app:layout_constraintTop_toBottomOf="@+id/et_cep"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_bairro"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Bairro"
+        android:inputType="text"
+        android:textColorHint="@color/material_dynamic_neutral_variant60"
+        app:layout_constraintBottom_toTopOf="@+id/et_cidade"
+        app:layout_constraintStart_toStartOf="@+id/et_cidade"
+        app:layout_constraintTop_toBottomOf="@+id/et_rua"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_cidade"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Cidade"
+        android:inputType="text"
+        android:textColorHint="@color/material_dynamic_neutral_variant60"
+        app:layout_constraintBottom_toTopOf="@+id/et_estado"
+        app:layout_constraintStart_toStartOf="@+id/et_estado"
+        app:layout_constraintTop_toBottomOf="@+id/et_bairro"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/et_estado"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:ems="10"
+        android:hint="Estado"
+        android:inputType="text"
+        android:textColorHint="@color/material_dynamic_neutral_variant60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cidade"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Button
+        android:id="@+id/btn_salvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Salvar usuário"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_estado" />
+
+    <ImageButton
+        android:id="@+id/imgb_buscar"
+        android:layout_width="60dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_cep"
+        app:srcCompat="?android:attr/actionModeWebSearchDrawable"
+        tools:layout_editor_absoluteY="251dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
